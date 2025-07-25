@@ -12,125 +12,170 @@
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             min-height: 100vh;
         }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
         .card {
             background: white;
             border-radius: 15px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            padding: 2rem;
-            margin-bottom: 2rem;
+            padding: 30px;
+            margin-bottom: 30px;
         }
-        .income-item {
-            background: #f8fafc;
-            border: 2px solid #e5e7eb;
-            border-radius: 10px;
-            padding: 1rem;
-            margin-bottom: 1rem;
+        .btn {
+            padding: 10px 20px;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
             transition: all 0.3s ease;
-        }
-        .income-item:hover {
-            border-color: #3b82f6;
-            box-shadow: 0 5px 15px rgba(59, 130, 246, 0.1);
+            font-weight: 600;
         }
         .btn-primary {
-            background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+            background: linear-gradient(45deg, #667eea, #764ba2);
             color: white;
-            padding: 0.75rem 1.5rem;
-            border-radius: 8px;
-            border: none;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            font-weight: 600;
         }
         .btn-primary:hover {
-            background: linear-gradient(135deg, #1d4ed8, #1e3a8a);
             transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
         }
-        .btn-edit {
-            background: #10b981;
+        .btn-secondary {
+            background: #6c757d;
             color: white;
-            padding: 0.5rem 1rem;
-            border-radius: 6px;
-            border: none;
-            cursor: pointer;
-            transition: all 0.3s ease;
         }
-        .btn-edit:hover {
-            background: #059669;
-        }
-        .btn-delete {
-            background: #ef4444;
+        .btn-success {
+            background: #28a745;
             color: white;
-            padding: 0.5rem 1rem;
-            border-radius: 6px;
-            border: none;
-            cursor: pointer;
-            transition: all 0.3s ease;
         }
-        .btn-delete:hover {
-            background: #dc2626;
+        .btn-danger {
+            background: #dc3545;
+            color: white;
         }
-        input, select {
-            background: white !important;
-            color: #1f2937 !important;
-            border: 2px solid #d1d5db !important;
-            border-radius: 8px;
-            padding: 0.75rem;
+        .btn-warning {
+            background: #ffc107;
+            color: #212529;
+        }
+        .btn-info {
+            background: #17a2b8;
+            color: white;
+        }
+        .form-control {
             width: 100%;
-            transition: border-color 0.3s ease;
-        }
-        input:focus, select:focus {
-            outline: none;
-            border-color: #3b82f6 !important;
-            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
-        }
-        label {
-            color: #374151 !important;
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-            display: block;
-        }
-        .checkbox-container {
-            display: flex;
-            align-items: center;
-            background: white;
-            padding: 0.75rem;
-            border: 2px solid #d1d5db;
+            padding: 12px;
+            border: 2px solid #e9ecef;
             border-radius: 8px;
-            cursor: pointer;
+            font-size: 16px;
             transition: border-color 0.3s ease;
         }
-        .checkbox-container:hover {
-            border-color: #3b82f6;
+        .form-control:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
         }
-        .checkbox-container input[type="checkbox"] {
-            width: 20px !important;
-            height: 20px !important;
-            margin-left: 0.75rem;
-            accent-color: #3b82f6;
-            cursor: pointer;
+        .form-group {
+            margin-bottom: 20px;
         }
-        .checkbox-container label {
-            color: #374151 !important;
-            margin: 0;
-            cursor: pointer;
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #495057;
+        }
+        .table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        .table th,
+        .table td {
+            padding: 12px;
+            text-align: right;
+            border-bottom: 1px solid #dee2e6;
+        }
+        .table th {
+            background: #f8f9fa;
+            font-weight: 600;
+            color: #495057;
+        }
+        .table tbody tr:hover {
+            background: #f8f9fa;
+        }
+        .alert {
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        .alert-success {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        .alert-danger {
+            background: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: white;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 10px;
+        }
+        .header p {
+            color: rgba(255,255,255,0.9);
+            font-size: 1.1rem;
+        }
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        .stat-card {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+        .stat-card i {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+        .stat-card h3 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #495057;
+            margin-bottom: 20px;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
+        }
+        .income-item {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .income-info {
             flex: 1;
         }
-        .report-section {
-            background: #f0f9ff;
-            border: 2px solid #bae6fd;
-            border-radius: 10px;
-            padding: 1.5rem;
-            margin-bottom: 2rem;
-        }
-        .total-amount {
-            background: linear-gradient(135deg, #10b981, #059669);
-            color: white;
-            padding: 1rem;
-            border-radius: 10px;
-            text-align: center;
-            font-size: 1.25rem;
-            font-weight: bold;
-            margin-bottom: 1rem;
+        .income-actions {
+            display: flex;
+            gap: 10px;
         }
         .modal {
             display: none;
@@ -144,519 +189,875 @@
         }
         .modal-content {
             background-color: white;
-            margin: 5% auto;
-            padding: 2rem;
+            margin: 15% auto;
+            padding: 30px;
             border-radius: 15px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.3);
             width: 90%;
             max-width: 500px;
-            max-height: 80vh;
-            overflow-y: auto;
         }
-        .close {
-            color: #aaa;
-            float: left;
-            font-size: 28px;
-            font-weight: bold;
-            cursor: pointer;
+        .export-section {
+            text-align: center;
+            margin-top: 30px;
         }
-        .close:hover {
-            color: #000;
+        .export-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
         }
-        .tab-button {
-            background: #e5e7eb;
-            color: #374151;
-            padding: 0.75rem 1.5rem;
-            border: none;
-            cursor: pointer;
-            border-radius: 8px 8px 0 0;
-            margin-left: 2px;
-            transition: all 0.3s ease;
+        .management-section {
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 2px solid #e9ecef;
         }
-        .tab-button.active {
-            background: #3b82f6;
-            color: white;
+        .custom-checkbox {
+            display: flex;
+            align-items: center;
+            gap: 10px;
         }
-        .tab-content {
-            display: none;
-            background: white;
-            padding: 2rem;
-            border-radius: 0 15px 15px 15px;
+        .custom-checkbox input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+            accent-color: #667eea;
         }
-        .tab-content.active {
-            display: block;
-        }
-        .print-friendly {
-            break-inside: avoid;
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+            .card {
+                padding: 20px;
+            }
+            .export-buttons {
+                flex-direction: column;
+            }
+            .income-item {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+            }
+            .income-actions {
+                width: 100%;
+                justify-content: flex-end;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="container mx-auto px-4 py-8 max-w-6xl">
-        <div class="text-center mb-8">
-            <h1 class="text-4xl font-bold text-white mb-4">
-                <i class="fas fa-chart-line ml-2"></i>
-                מעקב הכנסות חודשיות
-            </h1>
-            <p class="text-blue-100 text-lg">ניהול ומעקב אחר ההכנסות שלך בצורה פשוטה ויעילה</p>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fas fa-chart-line"></i> מעקב הכנסות חודשיות</h1>
+            <p>נהל את ההכנסות שלך בצורה פשוטה ויעילה</p>
         </div>
 
-        <!-- הגדרות מקורות הכנסה -->
-        <div class="card print-friendly">
-            <h2 class="text-2xl font-bold text-gray-800 mb-6 flex items-center">
-                <i class="fas fa-cog ml-2"></i>
-                הגדרות מקורות הכנסה
-            </h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                <div>
-                    <label>מקור הכנסה 1:</label>
-                    <input type="text" id="source1Name" placeholder="טיפולים פרטיים" value="טיפולים פרטיים">
-                </div>
-                <div>
-                    <label>מקור הכנסה 2:</label>
-                    <input type="text" id="source2Name" placeholder="גן תל השומר" value="גן תל השומר">
-                </div>
-                <div>
-                    <label>מקור הכנסה 3:</label>
-                    <input type="text" id="source3Name" placeholder="שונות" value="שונות">
-                </div>
-            </div>
-            <button onclick="updateSourceNames()" class="btn-primary mt-4">
-                <i class="fas fa-save ml-1"></i>
-                שמור שמות מקורות
-            </button>
-        </div>
-
-        <!-- הוספת הכנסה -->
-        <div class="card print-friendly">
-            <h2 class="text-2xl font-bold text-gray-800 mb-6 flex items-center">
-                <i class="fas fa-plus-circle ml-2"></i>
-                הוספת הכנסה חדשה
-            </h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-                <div>
-                    <label>תאריך:</label>
-                    <input type="date" id="incomeDate">
-                </div>
-                <div>
-                    <label>מקור הכנסה:</label>
-                    <select id="incomeSource">
-                        <option value="source1">טיפולים פרטיים</option>
-                        <option value="source2">גן תל השומר</option>
-                        <option value="source3">שונות</option>
-                    </select>
-                </div>
-                <div>
-                    <label>סכום (₪):</label>
-                    <input type="number" id="incomeAmount" placeholder="0" step="0.01">
-                </div>
-                <div>
-                    <div class="checkbox-container">
-                        <label>הכנסה קבועה</label>
-                        <input type="checkbox" id="isFixed">
+        <!-- אזור הוספת הכנסה -->
+        <div class="card">
+            <h2 class="section-title"><i class="fas fa-plus-circle"></i> הוספת הכנסה חדשה</h2>
+            <form id="incomeForm">
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px;">
+                    <div class="form-group">
+                        <label for="amount">סכום (₪)</label>
+                        <input type="number" class="form-control" id="amount" required min="0" step="0.01">
+                    </div>
+                    <div class="form-group">
+                        <label for="source">מקור הכנסה</label>
+                        <select class="form-control" id="source" required>
+                            <option value="טיפולים פרטיים">טיפולים פרטיים</option>
+                            <option value="גן תל השומר">גן תל השומר</option>
+                            <option value="שונות">שונות</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="date">תאריך</label>
+                        <input type="date" class="form-control" id="date" required>
                     </div>
                 </div>
+                <div class="form-group">
+                    <label for="notes">הערות (אופציונלי)</label>
+                    <input type="text" class="form-control" id="notes" maxlength="100" placeholder="הערות קצרות...">
+                </div>
+                <div class="form-group">
+                    <div class="custom-checkbox">
+                        <input type="checkbox" id="isFixed">
+                        <label for="isFixed">הכנסה קבועה</label>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary">
+                    <i class="fas fa-plus"></i> הוסף הכנסה
+                </button>
+            </form>
+        </div>
+
+        <!-- סטטיסטיקות מהירות -->
+        <div class="stats-grid">
+            <div class="stat-card">
+                <i class="fas fa-calendar-month text-blue-500"></i>
+                <h3 id="monthlyTotal">₪0</h3>
+                <p>סה"כ החודש</p>
             </div>
-            <button onclick="addIncome()" class="btn-primary mt-4">
-                <i class="fas fa-plus ml-1"></i>
-                הוסף הכנסה
+            <div class="stat-card">
+                <i class="fas fa-calendar-year text-green-500"></i>
+                <h3 id="yearlyTotal">₪0</h3>
+                <p>סה"כ השנה</p>
+            </div>
+            <div class="stat-card">
+                <i class="fas fa-list text-purple-500"></i>
+                <h3 id="totalEntries">0</h3>
+                <p>הכנסות החודש</p>
+            </div>
+        </div>
+
+        <!-- רשימת הכנסות החודש -->
+        <div class="card">
+            <h2 class="section-title"><i class="fas fa-list"></i> הכנסות החודש הנוכחי</h2>
+            <div id="currentMonthIncomes">
+                <p class="text-center text-gray-500">אין הכנסות להציג עבור החודש הנוכחי</p>
+            </div>
+        </div>
+
+        <!-- דוח חודשי -->
+        <div class="card">
+            <h2 class="section-title"><i class="fas fa-chart-bar"></i> דוח חודשי</h2>
+            <div class="form-group">
+                <label for="monthSelect">בחר חודש לדוח</label>
+                <select class="form-control" id="monthSelect" style="max-width: 200px;">
+                    <option value="2025-01">ינואר 2025</option>
+                    <option value="2024-12">דצמבר 2024</option>
+                    <option value="2024-11">נובמבר 2024</option>
+                    <option value="2024-10">אוקטובר 2024</option>
+                    <option value="2024-09">ספטמבר 2024</option>
+                    <option value="2024-08">אוגוסט 2024</option>
+                    <option value="2024-07">יולי 2024</option>
+                    <option value="2024-06">יוני 2024</option>
+                    <option value="2024-05">מאי 2024</option>
+                    <option value="2024-04">אפריל 2024</option>
+                    <option value="2024-03">מרץ 2024</option>
+                    <option value="2024-02">פברואר 2024</option>
+                </select>
+            </div>
+            <div id="monthlyReport">
+                <p class="text-center text-gray-500">בחר חודש כדי לראות דוח</p>
+            </div>
+            <div class="export-section">
+                <div class="export-buttons">
+                    <button class="btn btn-success" onclick="exportMonthlyToCSV()">
+                        <i class="fas fa-file-csv"></i> ייצא ל-CSV
+                    </button>
+                    <button class="btn btn-info" onclick="shareMonthlyToWhatsApp()">
+                        <i class="fab fa-whatsapp"></i> שלח לווטסאפ
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- דוח שנתי -->
+        <div class="card">
+            <h2 class="section-title"><i class="fas fa-chart-line"></i> דוח שנתי</h2>
+            <div class="form-group">
+                <label for="yearSelect">בחר שנה לדוח</label>
+                <select class="form-control" id="yearSelect" style="max-width: 200px;">
+                    <option value="2025">2025</option>
+                    <option value="2024">2024</option>
+                    <option value="2023">2023</option>
+                </select>
+            </div>
+            <div id="yearlyReport">
+                <p class="text-center text-gray-500">בחר שנה כדי לראות דוח</p>
+            </div>
+            <div class="export-section">
+                <div class="export-buttons">
+                    <button class="btn btn-success" onclick="exportYearlyToCSV()">
+                        <i class="fas fa-file-csv"></i> ייצא ל-CSV
+                    </button>
+                    <button class="btn btn-info" onclick="shareYearlyToWhatsApp()">
+                        <i class="fab fa-whatsapp"></i> שלח לווטסאפ
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- ניהול מקורות הכנסה -->
+        <div class="card management-section">
+            <h2 class="section-title"><i class="fas fa-cogs"></i> ניהול מקורות הכנסה</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
+                <div>
+                    <h3><i class="fas fa-plus"></i> הוסף מקור הכנסה חדש</h3>
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="newSourceName" placeholder="שם המקור החדש...">
+                    </div>
+                    <button class="btn btn-primary" onclick="addIncomeSource()">
+                        <i class="fas fa-plus"></i> הוסף מקור
+                    </button>
+                </div>
+                <div>
+                    <h3><i class="fas fa-list"></i> מקורות הכנסה קיימים</h3>
+                    <div id="existingSources"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- גיבוי כללי -->
+        <div class="card">
+            <h2 class="section-title"><i class="fas fa-download"></i> גיבוי כללי</h2>
+            <p class="text-gray-600 mb-4">ייצא את כל הנתונים שלך לגיבוי או להעברה למחשב אחר</p>
+            <button class="btn btn-warning" onclick="exportAllDataToCSV()">
+                <i class="fas fa-database"></i> גבה את כל הנתונים
             </button>
-        </div>
-
-        <!-- רשימת הכנסות -->
-        <div class="card print-friendly">
-            <h2 class="text-2xl font-bold text-gray-800 mb-6 flex items-center">
-                <i class="fas fa-list ml-2"></i>
-                רשימת הכנסות
-            </h2>
-            <div id="incomeList"></div>
-        </div>
-
-        <!-- דוחות -->
-        <div class="card print-friendly">
-            <h2 class="text-2xl font-bold text-gray-800 mb-6 flex items-center">
-                <i class="fas fa-chart-bar ml-2"></i>
-                דוחות
-            </h2>
-            
-            <div class="flex flex-wrap">
-                <button class="tab-button active" onclick="showTab('monthly')">דוח חודשי</button>
-                <button class="tab-button" onclick="showTab('yearly')">דוח שנתי</button>
-            </div>
-
-            <div id="monthlyTab" class="tab-content active">
-                <div class="mb-4">
-                    <label>חודש ושנה:</label>
-                    <input type="month" id="reportMonth">
-                    <button onclick="generateMonthlyReport()" class="btn-primary mr-2">
-                        <i class="fas fa-search ml-1"></i>
-                        הצג דוח
-                    </button>
-                </div>
-                <div id="monthlyReport"></div>
-            </div>
-
-            <div id="yearlyTab" class="tab-content">
-                <div class="mb-4">
-                    <label>שנה:</label>
-                    <input type="number" id="reportYear" min="2020" max="2030">
-                    <button onclick="generateYearlyReport()" class="btn-primary mr-2">
-                        <i class="fas fa-search ml-1"></i>
-                        הצג דוח
-                    </button>
-                </div>
-                <div id="yearlyReport"></div>
-            </div>
         </div>
     </div>
 
-    <!-- Modal לעריכת הכנסה -->
+    <!-- Modal לעריכה -->
     <div id="editModal" class="modal">
         <div class="modal-content">
-            <span class="close" onclick="closeEditModal()">&times;</span>
-            <h2 class="text-xl font-bold text-gray-800 mb-4">עריכת הכנסה</h2>
-            <div class="space-y-4">
-                <div>
-                    <label>תאריך:</label>
-                    <input type="date" id="editDate">
+            <h3><i class="fas fa-edit"></i> עריכת הכנסה</h3>
+            <form id="editForm">
+                <input type="hidden" id="editId">
+                <div class="form-group">
+                    <label for="editAmount">סכום (₪)</label>
+                    <input type="number" class="form-control" id="editAmount" required min="0" step="0.01">
                 </div>
-                <div>
-                    <label>מקור הכנסה:</label>
-                    <select id="editSource">
-                        <option value="source1">טיפולים פרטיים</option>
-                        <option value="source2">גן תל השומר</option>
-                        <option value="source3">שונות</option>
-                    </select>
+                <div class="form-group">
+                    <label for="editSource">מקור הכנסה</label>
+                    <select class="form-control" id="editSource" required></select>
                 </div>
-                <div>
-                    <label>סכום (₪):</label>
-                    <input type="number" id="editAmount" step="0.01">
+                <div class="form-group">
+                    <label for="editDate">תאריך</label>
+                    <input type="date" class="form-control" id="editDate" required>
                 </div>
-                <div>
-                    <div class="checkbox-container">
-                        <label>הכנסה קבועה</label>
-                        <input type="checkbox" id="editFixed">
+                <div class="form-group">
+                    <label for="editNotes">הערות</label>
+                    <input type="text" class="form-control" id="editNotes" maxlength="100">
+                </div>
+                <div class="form-group">
+                    <div class="custom-checkbox">
+                        <input type="checkbox" id="editIsFixed">
+                        <label for="editIsFixed">הכנסה קבועה</label>
                     </div>
                 </div>
-                <div class="flex gap-2">
-                    <button onclick="saveEdit()" class="btn-primary">
-                        <i class="fas fa-save ml-1"></i>
-                        שמור שינויים
-                    </button>
-                    <button onclick="closeEditModal()" class="btn-delete">
-                        ביטול
-                    </button>
+                <div style="display: flex; gap: 10px; justify-content: flex-end;">
+                    <button type="button" class="btn btn-secondary" onclick="closeEditModal()">ביטול</button>
+                    <button type="submit" class="btn btn-primary">שמור שינויים</button>
                 </div>
-            </div>
+            </form>
         </div>
     </div>
 
+    <!-- Alert messages -->
+    <div id="alertContainer" style="position: fixed; top: 20px; left: 20px; right: 20px; z-index: 2000;"></div>
+
     <script>
+        // נתונים מקומיים
         let incomes = JSON.parse(localStorage.getItem('incomes')) || [];
-        let sourceNames = JSON.parse(localStorage.getItem('sourceNames')) || {
-            source1: 'טיפולים פרטיים',
-            source2: 'גן תל השומר',
-            source3: 'שונות'
-        };
-        let editingIndex = -1;
+        let sources = JSON.parse(localStorage.getItem('sources')) || ['טיפולים פרטיים', 'גן תל השומר', 'שונות'];
 
         // אתחול
-        window.onload = function() {
-            document.getElementById('incomeDate').value = new Date().toISOString().split('T')[0];
-            document.getElementById('reportMonth').value = new Date().toISOString().slice(0, 7);
-            document.getElementById('reportYear').value = new Date().getFullYear();
-            updateSourceNames();
-            displayIncomes();
+        document.addEventListener('DOMContentLoaded', function() {
+            updateSourceSelects();
+            updateCurrentMonthDisplay();
+            updateStats();
+            updateExistingSources();
+            setDefaultDate();
+            generateMonthOptions();
+            
+            // Event listeners
+            document.getElementById('incomeForm').addEventListener('submit', addIncome);
+            document.getElementById('editForm').addEventListener('submit', updateIncome);
+            document.getElementById('monthSelect').addEventListener('change', generateMonthlyReport);
+            document.getElementById('yearSelect').addEventListener('change', generateYearlyReport);
+            
+            // יצירת דוחות ראשוניים
             generateMonthlyReport();
-        };
+            generateYearlyReport();
+        });
 
-        function updateSourceNames() {
-            sourceNames.source1 = document.getElementById('source1Name').value || 'טיפולים פרטיים';
-            sourceNames.source2 = document.getElementById('source2Name').value || 'גן תל השומר';
-            sourceNames.source3 = document.getElementById('source3Name').value || 'שונות';
-            
-            localStorage.setItem('sourceNames', JSON.stringify(sourceNames));
-            
-            // עדכון הסלקט באקסים
-            updateSelectOptions();
-            displayIncomes();
-            
-            alert('שמות המקורות נשמרו בהצלחה!');
+        function setDefaultDate() {
+            const today = new Date().toISOString().split('T')[0];
+            document.getElementById('date').value = today;
         }
 
-        function updateSelectOptions() {
-            const selects = ['incomeSource', 'editSource'];
-            selects.forEach(selectId => {
-                const select = document.getElementById(selectId);
-                select.innerHTML = `
-                    <option value="source1">${sourceNames.source1}</option>
-                    <option value="source2">${sourceNames.source2}</option>
-                    <option value="source3">${sourceNames.source3}</option>
-                `;
-            });
+        function generateMonthOptions() {
+            const monthSelect = document.getElementById('monthSelect');
+            const currentDate = new Date();
+            const currentMonth = `${currentDate.getFullYear()}-${String(currentDate.getMonth() + 1).padStart(2, '0')}`;
+            
+            // הגדרת החודש הנוכחי כברירת מחדל
+            monthSelect.value = currentMonth;
         }
 
-        function addIncome() {
-            const date = document.getElementById('incomeDate').value;
-            const source = document.getElementById('incomeSource').value;
-            const amount = parseFloat(document.getElementById('incomeAmount').value);
+        function addIncome(e) {
+            e.preventDefault();
+            
+            const amount = parseFloat(document.getElementById('amount').value);
+            const source = document.getElementById('source').value;
+            const date = document.getElementById('date').value;
+            const notes = document.getElementById('notes').value;
             const isFixed = document.getElementById('isFixed').checked;
-
-            if (!date || !amount || amount <= 0) {
-                alert('אנא מלא את כל השדות הנדרשים');
-                return;
-            }
-
+            
             const income = {
                 id: Date.now(),
-                date: date,
-                source: source,
-                amount: amount,
-                isFixed: isFixed
+                amount,
+                source,
+                date,
+                notes,
+                isFixed,
+                timestamp: new Date().toISOString()
             };
-
-            incomes.push(income);
-            saveToStorage();
-            displayIncomes();
-            clearForm();
-            alert('ההכנסה נוספה בהצלחה!');
-        }
-
-        function clearForm() {
-            document.getElementById('incomeAmount').value = '';
-            document.getElementById('isFixed').checked = false;
-        }
-
-        function displayIncomes() {
-            const list = document.getElementById('incomeList');
-            if (incomes.length === 0) {
-                list.innerHTML = '<p class="text-gray-500 text-center">אין עדיין הכנסות רשומות</p>';
-                return;
-            }
-
-            const sortedIncomes = incomes.sort((a, b) => new Date(b.date) - new Date(a.date));
             
-            list.innerHTML = sortedIncomes.map((income, index) => `
-                <div class="income-item">
-                    <div class="flex justify-between items-center">
-                        <div class="flex-1">
-                            <div class="text-lg font-bold text-gray-800">
-                                ${sourceNames[income.source]} - ₪${income.amount.toLocaleString()}
-                            </div>
-                            <div class="text-sm text-gray-600">
-                                תאריך: ${new Date(income.date).toLocaleDateString('he-IL')}
-                                ${income.isFixed ? '<span class="bg-green-100 text-green-800 px-2 py-1 rounded text-xs mr-2">קבוע</span>' : ''}
-                            </div>
-                        </div>
-                        <div class="flex gap-2">
-                            <button onclick="editIncome(${incomes.indexOf(income)})" class="btn-edit">
-                                <i class="fas fa-edit"></i>
-                            </button>
-                            <button onclick="deleteIncome(${incomes.indexOf(income)})" class="btn-delete">
-                                <i class="fas fa-trash"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            `).join('');
+            incomes.unshift(income);
+            saveData();
+            updateDisplays();
+            
+            // איפוס הטופס
+            document.getElementById('incomeForm').reset();
+            setDefaultDate();
+            
+            showAlert('ההכנסה נוספה בהצלחה!', 'success');
         }
 
-        function editIncome(index) {
-            editingIndex = index;
-            const income = incomes[index];
+        function editIncome(id) {
+            const income = incomes.find(i => i.id === id);
+            if (!income) return;
             
-            document.getElementById('editDate').value = income.date;
-            document.getElementById('editSource').value = income.source;
+            // מילוי הטופס
+            document.getElementById('editId').value = id;
             document.getElementById('editAmount').value = income.amount;
-            document.getElementById('editFixed').checked = income.isFixed;
+            document.getElementById('editSource').value = income.source;
+            document.getElementById('editDate').value = income.date;
+            document.getElementById('editNotes').value = income.notes || '';
+            document.getElementById('editIsFixed').checked = income.isFixed || false;
             
+            // עדכון אפשרויות מקור ההכנסה
+            updateEditSourceSelect();
+            
+            // הצגת המודל
             document.getElementById('editModal').style.display = 'block';
         }
 
-        function saveEdit() {
-            if (editingIndex === -1) return;
+        function updateIncome(e) {
+            e.preventDefault();
             
-            const date = document.getElementById('editDate').value;
-            const source = document.getElementById('editSource').value;
+            const id = parseInt(document.getElementById('editId').value);
             const amount = parseFloat(document.getElementById('editAmount').value);
-            const isFixed = document.getElementById('editFixed').checked;
-
-            if (!date || !amount || amount <= 0) {
-                alert('אנא מלא את כל השדות הנדרשים');
-                return;
+            const source = document.getElementById('editSource').value;
+            const date = document.getElementById('editDate').value;
+            const notes = document.getElementById('editNotes').value;
+            const isFixed = document.getElementById('editIsFixed').checked;
+            
+            const incomeIndex = incomes.findIndex(i => i.id === id);
+            if (incomeIndex !== -1) {
+                incomes[incomeIndex] = {
+                    ...incomes[incomeIndex],
+                    amount,
+                    source,
+                    date,
+                    notes,
+                    isFixed
+                };
+                
+                saveData();
+                updateDisplays();
+                closeEditModal();
+                showAlert('ההכנסה עודכנה בהצלחה!', 'success');
             }
+        }
 
-            incomes[editingIndex] = {
-                ...incomes[editingIndex],
-                date: date,
-                source: source,
-                amount: amount,
-                isFixed: isFixed
-            };
-
-            saveToStorage();
-            displayIncomes();
-            closeEditModal();
-            alert('ההכנסה עודכנה בהצלחה!');
+        function deleteIncome(id) {
+            if (confirm('האם אתה בטוח שברצונך למחוק הכנסה זו?')) {
+                incomes = incomes.filter(i => i.id !== id);
+                saveData();
+                updateDisplays();
+                showAlert('ההכנסה נמחקה בהצלחה!', 'success');
+            }
         }
 
         function closeEditModal() {
             document.getElementById('editModal').style.display = 'none';
-            editingIndex = -1;
         }
 
-        function deleteIncome(index) {
-            if (confirm('האם אתה בטוח שברצונך למחוק הכנסה זו?')) {
-                incomes.splice(index, 1);
-                saveToStorage();
-                displayIncomes();
-                alert('ההכנסה נמחקה בהצלחה!');
+        function addIncomeSource() {
+            const newSourceName = document.getElementById('newSourceName').value.trim();
+            if (!newSourceName) {
+                showAlert('נא להזין שם מקור הכנסה', 'danger');
+                return;
             }
+            
+            if (sources.includes(newSourceName)) {
+                showAlert('מקור הכנסה זה כבר קיים', 'danger');
+                return;
+            }
+            
+            sources.push(newSourceName);
+            saveData();
+            updateSourceSelects();
+            updateExistingSources();
+            
+            document.getElementById('newSourceName').value = '';
+            showAlert('מקור הכנסה נוסף בהצלחה!', 'success');
+        }
+
+        function removeIncomeSource(sourceName) {
+            if (confirm(`האם אתה בטוח שברצונך למחוק את המקור "${sourceName}"?`)) {
+                sources = sources.filter(s => s !== sourceName);
+                saveData();
+                updateSourceSelects();
+                updateExistingSources();
+                showAlert('מקור ההכנסה נמחק בהצלחה!', 'success');
+            }
+        }
+
+        function updateSourceSelects() {
+            const sourceSelect = document.getElementById('source');
+            sourceSelect.innerHTML = '';
+            sources.forEach(source => {
+                const option = document.createElement('option');
+                option.value = source;
+                option.textContent = source;
+                sourceSelect.appendChild(option);
+            });
+        }
+
+        function updateEditSourceSelect() {
+            const editSourceSelect = document.getElementById('editSource');
+            editSourceSelect.innerHTML = '';
+            sources.forEach(source => {
+                const option = document.createElement('option');
+                option.value = source;
+                option.textContent = source;
+                editSourceSelect.appendChild(option);
+            });
+        }
+
+        function updateExistingSources() {
+            const container = document.getElementById('existingSources');
+            container.innerHTML = '';
+            
+            sources.forEach(source => {
+                const div = document.createElement('div');
+                div.className = 'income-item';
+                div.innerHTML = `
+                    <span>${source}</span>
+                    <button class="btn btn-danger btn-sm" onclick="removeIncomeSource('${source}')">
+                        <i class="fas fa-trash"></i>
+                    </button>
+                `;
+                container.appendChild(div);
+            });
+        }
+
+        function updateCurrentMonthDisplay() {
+            const currentDate = new Date();
+            const currentMonth = `${currentDate.getFullYear()}-${String(currentDate.getMonth() + 1).padStart(2, '0')}`;
+            const monthIncomes = incomes.filter(income => income.date.startsWith(currentMonth));
+            
+            const container = document.getElementById('currentMonthIncomes');
+            
+            if (monthIncomes.length === 0) {
+                container.innerHTML = '<p class="text-center text-gray-500">אין הכנסות להציג עבור החודש הנוכחי</p>';
+                return;
+            }
+            
+            container.innerHTML = '';
+            monthIncomes.forEach(income => {
+                const div = document.createElement('div');
+                div.className = 'income-item';
+                div.innerHTML = `
+                    <div class="income-info">
+                        <strong>₪${income.amount.toLocaleString()}</strong> - ${income.source}
+                        <br>
+                        <small class="text-gray-600">
+                            ${formatDate(income.date)}
+                            ${income.notes ? ` • ${income.notes}` : ''}
+                            ${income.isFixed ? ' • <span class="text-blue-600">קבוע</span>' : ''}
+                        </small>
+                    </div>
+                    <div class="income-actions">
+                        <button class="btn btn-warning btn-sm" onclick="editIncome(${income.id})">
+                            <i class="fas fa-edit"></i>
+                        </button>
+                        <button class="btn btn-danger btn-sm" onclick="deleteIncome(${income.id})">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </div>
+                `;
+                container.appendChild(div);
+            });
+        }
+
+        function updateStats() {
+            const currentDate = new Date();
+            const currentMonth = `${currentDate.getFullYear()}-${String(currentDate.getMonth() + 1).padStart(2, '0')}`;
+            const currentYear = currentDate.getFullYear().toString();
+            
+            const monthlyIncomes = incomes.filter(income => income.date.startsWith(currentMonth));
+            const yearlyIncomes = incomes.filter(income => income.date.startsWith(currentYear));
+            
+            const monthlyTotal = monthlyIncomes.reduce((sum, income) => sum + income.amount, 0);
+            const yearlyTotal = yearlyIncomes.reduce((sum, income) => sum + income.amount, 0);
+            
+            document.getElementById('monthlyTotal').textContent = `₪${monthlyTotal.toLocaleString()}`;
+            document.getElementById('yearlyTotal').textContent = `₪${yearlyTotal.toLocaleString()}`;
+            document.getElementById('totalEntries').textContent = monthlyIncomes.length;
         }
 
         function generateMonthlyReport() {
-            const month = document.getElementById('reportMonth').value;
-            if (!month) return;
-
-            const [year, monthNum] = month.split('-');
-            const monthIncomes = incomes.filter(income => {
-                const incomeDate = new Date(income.date);
-                return incomeDate.getFullYear() == year && incomeDate.getMonth() == monthNum - 1;
-            });
-
-            const report = document.getElementById('monthlyReport');
+            const selectedMonth = document.getElementById('monthSelect').value;
+            const monthIncomes = incomes.filter(income => income.date.startsWith(selectedMonth));
+            
+            const container = document.getElementById('monthlyReport');
             
             if (monthIncomes.length === 0) {
-                report.innerHTML = '<p class="text-gray-500">אין הכנסות לחודש זה</p>';
+                container.innerHTML = '<p class="text-center text-gray-500">אין נתונים עבור החודש הנבחר</p>';
                 return;
             }
-
-            const totalBySource = {};
-            let totalFixed = 0;
-            let totalVariable = 0;
-
+            
+            // קיבוץ לפי מקור
+            const groupedBySources = {};
+            let totalAmount = 0;
+            
             monthIncomes.forEach(income => {
-                if (!totalBySource[income.source]) {
-                    totalBySource[income.source] = 0;
+                if (!groupedBySources[income.source]) {
+                    groupedBySources[income.source] = {
+                        total: 0,
+                        count: 0,
+                        fixed: 0,
+                        variable: 0
+                    };
                 }
-                totalBySource[income.source] += income.amount;
+                groupedBySources[income.source].total += income.amount;
+                groupedBySources[income.source].count++;
                 
                 if (income.isFixed) {
-                    totalFixed += income.amount;
+                    groupedBySources[income.source].fixed += income.amount;
                 } else {
-                    totalVariable += income.amount;
+                    groupedBySources[income.source].variable += income.amount;
                 }
+                
+                totalAmount += income.amount;
             });
-
-            const total = totalFixed + totalVariable;
-
-            report.innerHTML = `
-                <div class="total-amount">
-                    סה"כ הכנסות החודש: ₪${total.toLocaleString()}
+            
+            let html = `
+                <div class="alert alert-success">
+                    <h4><strong>סה"כ הכנסות החודש: ₪${totalAmount.toLocaleString()}</strong></h4>
+                    <p>מספר הכנסות: ${monthIncomes.length}</p>
                 </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-                    <div class="bg-green-50 p-4 rounded-lg">
-                        <h4 class="font-bold text-green-800">הכנסות קבועות</h4>
-                        <p class="text-2xl font-bold text-green-600">₪${totalFixed.toLocaleString()}</p>
-                    </div>
-                    <div class="bg-blue-50 p-4 rounded-lg">
-                        <h4 class="font-bold text-blue-800">הכנסות משתנות</h4>
-                        <p class="text-2xl font-bold text-blue-600">₪${totalVariable.toLocaleString()}</p>
-                    </div>
-                </div>
-                <h4 class="font-bold text-gray-800 mb-2">פילוח לפי מקור:</h4>
-                ${Object.entries(totalBySource).map(([source, amount]) => `
-                    <div class="flex justify-between items-center bg-gray-50 p-3 rounded mb-2">
-                        <span class="font-medium">${sourceNames[source]}</span>
-                        <span class="font-bold text-blue-600">₪${amount.toLocaleString()}</span>
-                    </div>
-                `).join('')}
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>מקור הכנסה</th>
+                            <th>סה"כ</th>
+                            <th>קבוע</th>
+                            <th>משתנה</th>
+                            <th>מספר הכנסות</th>
+                        </tr>
+                    </thead>
+                    <tbody>
             `;
+            
+            Object.entries(groupedBySources).forEach(([source, data]) => {
+                html += `
+                    <tr>
+                        <td><strong>${source}</strong></td>
+                        <td>₪${data.total.toLocaleString()}</td>
+                        <td class="text-blue-600">₪${data.fixed.toLocaleString()}</td>
+                        <td class="text-green-600">₪${data.variable.toLocaleString()}</td>
+                        <td>${data.count}</td>
+                    </tr>
+                `;
+            });
+            
+            html += '</tbody></table>';
+            
+            // רשימת הכנסות מפורטת
+            html += '<h4 class="mt-4 mb-3">פירוט הכנסות:</h4>';
+            monthIncomes.sort((a, b) => new Date(b.date) - new Date(a.date)).forEach(income => {
+                html += `
+                    <div class="income-item">
+                        <div class="income-info">
+                            <strong>₪${income.amount.toLocaleString()}</strong> - ${income.source}
+                            <br>
+                            <small class="text-gray-600">
+                                ${formatDate(income.date)}
+                                ${income.notes ? ` • ${income.notes}` : ''}
+                                ${income.isFixed ? ' • <span class="text-blue-600">קבוע</span>' : ''}
+                            </small>
+                        </div>
+                    </div>
+                `;
+            });
+            
+            container.innerHTML = html;
         }
 
         function generateYearlyReport() {
-            const year = document.getElementById('reportYear').value;
-            if (!year) return;
-
-            const yearIncomes = incomes.filter(income => {
-                return new Date(income.date).getFullYear() == year;
-            });
-
-            const report = document.getElementById('yearlyReport');
+            const selectedYear = document.getElementById('yearSelect').value;
+            const yearIncomes = incomes.filter(income => income.date.startsWith(selectedYear));
+            
+            const container = document.getElementById('yearlyReport');
             
             if (yearIncomes.length === 0) {
-                report.innerHTML = '<p class="text-gray-500">אין הכנסות לשנה זו</p>';
+                container.innerHTML = '<p class="text-center text-gray-500">אין נתונים עבור השנה הנבחרת</p>';
                 return;
             }
-
-            const monthlyTotals = {};
-            const sourceYearlyTotals = {};
-            let yearlyTotal = 0;
-
-            for (let month = 0; month < 12; month++) {
-                monthlyTotals[month] = 0;
-            }
-
-            yearIncomes.forEach(income => {
-                const month = new Date(income.date).getMonth();
-                monthlyTotals[month] += income.amount;
-                yearlyTotal += income.amount;
-                
-                if (!sourceYearlyTotals[income.source]) {
-                    sourceYearlyTotals[income.source] = 0;
-                }
-                sourceYearlyTotals[income.source] += income.amount;
-            });
-
+            
+            // קיבוץ לפי חודש
+            const monthlyData = {};
             const monthNames = [
                 'ינואר', 'פברואר', 'מרץ', 'אפריל', 'מאי', 'יוני',
                 'יולי', 'אוגוסט', 'ספטמבר', 'אוקטובר', 'נובמבר', 'דצמבר'
             ];
-
-            report.innerHTML = `
-                <div class="total-amount">
-                    סה"כ הכנסות השנה: ₪${yearlyTotal.toLocaleString()}
+            
+            yearIncomes.forEach(income => {
+                const month = income.date.substring(5, 7);
+                const monthKey = parseInt(month) - 1;
+                
+                if (!monthlyData[monthKey]) {
+                    monthlyData[monthKey] = {
+                        name: monthNames[monthKey],
+                        total: 0,
+                        count: 0,
+                        sources: {}
+                    };
+                }
+                
+                monthlyData[monthKey].total += income.amount;
+                monthlyData[monthKey].count++;
+                
+                if (!monthlyData[monthKey].sources[income.source]) {
+                    monthlyData[monthKey].sources[income.source] = 0;
+                }
+                monthlyData[monthKey].sources[income.source] += income.amount;
+            });
+            
+            const totalYear = yearIncomes.reduce((sum, income) => sum + income.amount, 0);
+            
+            let html = `
+                <div class="alert alert-success">
+                    <h4><strong>סה"כ הכנסות ${selectedYear}: ₪${totalYear.toLocaleString()}</strong></h4>
+                    <p>מספר הכנסות: ${yearIncomes.length}</p>
                 </div>
-                <h4 class="font-bold text-gray-800 mb-4">פילוח חודשי:</h4>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 mb-6">
-                    ${Object.entries(monthlyTotals).map(([month, total]) => `
-                        <div class="bg-blue-50 p-3 rounded-lg text-center">
-                            <div class="font-medium text-gray-700">${monthNames[month]}</div>
-                            <div class="text-lg font-bold text-blue-600">₪${total.toLocaleString()}</div>
-                        </div>
-                    `).join('')}
-                </div>
-                <h4 class="font-bold text-gray-800 mb-2">פילוח לפי מקור:</h4>
-                ${Object.entries(sourceYearlyTotals).map(([source, amount]) => `
-                    <div class="flex justify-between items-center bg-gray-50 p-3 rounded mb-2">
-                        <span class="font-medium">${sourceNames[source]}</span>
-                        <span class="font-bold text-blue-600">₪${amount.toLocaleString()}</span>
-                    </div>
-                `).join('')}
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>חודש</th>
+                            <th>סה"כ הכנסות</th>
+                            <th>מספר הכנסות</th>
+                            <th>ממוצע לחודש</th>
+                        </tr>
+                    </thead>
+                    <tbody>
             `;
+            
+            for (let i = 0; i < 12; i++) {
+                const month = monthlyData[i];
+                if (month) {
+                    const average = month.total / month.count;
+                    html += `
+                        <tr>
+                            <td><strong>${month.name}</strong></td>
+                            <td>₪${month.total.toLocaleString()}</td>
+                            <td>${month.count}</td>
+                            <td>₪${average.toLocaleString()}</td>
+                        </tr>
+                    `;
+                } else {
+                    html += `
+                        <tr class="text-gray-400">
+                            <td>${monthNames[i]}</td>
+                            <td>₪0</td>
+                            <td>0</td>
+                            <td>₪0</td>
+                        </tr>
+                    `;
+                }
+            }
+            
+            html += '</tbody></table>';
+            container.innerHTML = html;
         }
 
-        function showTab(tabName) {
-            // הסתר את כל הטאבים
-            document.querySelectorAll('.tab-content').forEach(tab => {
-                tab.classList.remove('active');
+        function exportMonthlyToCSV() {
+            const selectedMonth = document.getElementById('monthSelect').value;
+            const monthIncomes = incomes.filter(income => income.date.startsWith(selectedMonth));
+            
+            if (monthIncomes.length === 0) {
+                showAlert('אין נתונים לייצוא עבור החודש הנבחר', 'danger');
+                return;
+            }
+            
+            let csv = 'תאריך,מקור הכנסה,סכום,הערות,קבוע\n';
+            monthIncomes.forEach(income => {
+                csv += `"${income.date}","${income.source}",${income.amount},"${income.notes || ''}","${income.isFixed ? 'כן' : 'לא'}"\n`;
             });
-            document.querySelectorAll('.tab-button').forEach(button => {
-                button.classList.remove('active');
-            });
-
-            // הצג את הטאב הנבחר
-            document.getElementById(tabName + 'Tab').classList.add('active');
-            event.target.classList.add('active');
+            
+            downloadCSV(csv, `הכנסות-${selectedMonth}.csv`);
         }
 
-        function saveToStorage() {
+        function exportYearlyToCSV() {
+            const selectedYear = document.getElementById('yearSelect').value;
+            const yearIncomes = incomes.filter(income => income.date.startsWith(selectedYear));
+            
+            if (yearIncomes.length === 0) {
+                showAlert('אין נתונים לייצוא עבור השנה הנבחרת', 'danger');
+                return;
+            }
+            
+            let csv = 'תאריך,מקור הכנסה,סכום,הערות,קבוע\n';
+            yearIncomes.forEach(income => {
+                csv += `"${income.date}","${income.source}",${income.amount},"${income.notes || ''}","${income.isFixed ? 'כן' : 'לא'}"\n`;
+            });
+            
+            downloadCSV(csv, `הכנסות-${selectedYear}.csv`);
+        }
+
+        function exportAllDataToCSV() {
+            if (incomes.length === 0) {
+                showAlert('אין נתונים לייצוא', 'danger');
+                return;
+            }
+            
+            let csv = 'תאריך,מקור הכנסה,סכום,הערות,קבוע\n';
+            incomes.forEach(income => {
+                csv += `"${income.date}","${income.source}",${income.amount},"${income.notes || ''}","${income.isFixed ? 'כן' : 'לא'}"\n`;
+            });
+            
+            const today = new Date().toISOString().split('T')[0];
+            downloadCSV(csv, `גיבוי-הכנסות-${today}.csv`);
+        }
+
+        function downloadCSV(csv, filename) {
+            const blob = new Blob(['\uFEFF' + csv], { type: 'text/csv;charset=utf-8;' });
+            const link = document.createElement('a');
+            const url = URL.createObjectURL(blob);
+            link.setAttribute('href', url);
+            link.setAttribute('download', filename);
+            link.style.visibility = 'hidden';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+            
+            showAlert('הקובץ הורד בהצלחה!', 'success');
+        }
+
+        function shareMonthlyToWhatsApp() {
+            const selectedMonth = document.getElementById('monthSelect').value;
+            const monthIncomes = incomes.filter(income => income.date.startsWith(selectedMonth));
+            
+            if (monthIncomes.length === 0) {
+                showAlert('אין נתונים לשתף עבור החודש הנבחר', 'danger');
+                return;
+            }
+            
+            const [year, month] = selectedMonth.split('-');
+            const monthNames = [
+                'ינואר', 'פברואר', 'מרץ', 'אפריל', 'מאי', 'יוני',
+                'יולי', 'אוגוסט', 'ספטמבר', 'אוקטובר', 'נובמבר', 'דצמבר'
+            ];
+            const monthName = monthNames[parseInt(month) - 1];
+            
+            // קיבוץ לפי מקור
+            const groupedBySources = {};
+            let totalAmount = 0;
+            
+            monthIncomes.forEach(income => {
+                if (!groupedBySources[income.source]) {
+                    groupedBySources[income.source] = 0;
+                }
+                groupedBySources[income.source] += income.amount;
+                totalAmount += income.amount;
+            });
+            
+            let message = `📊 דוח הכנסות - ${monthName} ${year}\n\n`;
+            
+            Object.entries(groupedBySources).forEach(([source, total]) => {
+                const icon = source.includes('טיפול') ? '💆‍♀️' : source.includes('גן') ? '🏫' : '📦';
+                message += `${icon} ${source}: ₪${total.toLocaleString()}\n`;
+            });
+            
+            message += `\n📈 סה"כ החודש: ₪${totalAmount.toLocaleString()}\n`;
+            message += `📝 מספר הכנסות: ${monthIncomes.length}`;
+            
+            const encodedMessage = encodeURIComponent(message);
+            window.open(`https://wa.me/?text=${encodedMessage}`, '_blank');
+        }
+
+        function shareYearlyToWhatsApp() {
+            const selectedYear = document.getElementById('yearSelect').value;
+            const yearIncomes = incomes.filter(income => income.date.startsWith(selectedYear));
+            
+            if (yearIncomes.length === 0) {
+                showAlert('אין נתונים לשתף עבור השנה הנבחרת', 'danger');
+                return;
+            }
+            
+            const totalYear = yearIncomes.reduce((sum, income) => sum + income.amount, 0);
+            const monthlyAverage = totalYear / 12;
+            
+            // קיבוץ לפי מקור
+            const groupedBySources = {};
+            yearIncomes.forEach(income => {
+                if (!groupedBySources[income.source]) {
+                    groupedBySources[income.source] = 0;
+                }
+                groupedBySources[income.source] += income.amount;
+            });
+            
+            let message = `📊 דוח הכנסות שנתי - ${selectedYear}\n\n`;
+            
+            Object.entries(groupedBySources).forEach(([source, total]) => {
+                const icon = source.includes('טיפול') ? '💆‍♀️' : source.includes('גן') ? '🏫' : '📦';
+                message += `${icon} ${source}: ₪${total.toLocaleString()}\n`;
+            });
+            
+            message += `\n📈 סה"כ השנה: ₪${totalYear.toLocaleString()}\n`;
+            message += `📊 ממוצע חודשי: ₪${monthlyAverage.toLocaleString()}\n`;
+            message += `📝 מספר הכנסות: ${yearIncomes.length}`;
+            
+            const encodedMessage = encodeURIComponent(message);
+            window.open(`https://wa.me/?text=${encodedMessage}`, '_blank');
+        }
+
+        function formatDate(dateString) {
+            const date = new Date(dateString);
+            return date.toLocaleDateString('he-IL');
+        }
+
+        function saveData() {
             localStorage.setItem('incomes', JSON.stringify(incomes));
+            localStorage.setItem('sources', JSON.stringify(sources));
         }
 
-        // סגירת המודל בלחיצה על הרקע
+        function updateDisplays() {
+            updateCurrentMonthDisplay();
+            updateStats();
+            generateMonthlyReport();
+            generateYearlyReport();
+        }
+
+        function showAlert(message, type = 'success') {
+            const alertContainer = document.getElementById('alertContainer');
+            const alert = document.createElement('div');
+            alert.className = `alert alert-${type}`;
+            alert.innerHTML = `
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <span>${message}</span>
+                    <button onclick="this.parentElement.parentElement.remove()" style="background: none; border: none; font-size: 1.2em; cursor: pointer;">&times;</button>
+                </div>
+            `;
+            
+            alertContainer.appendChild(alert);
+            
+            // הסרה אוטומטית אחרי 3 שניות
+            setTimeout(() => {
+                if (alert.parentElement) {
+                    alert.remove();
+                }
+            }, 3000);
+        }
+
+        // סגירת המודל בלחיצה מחוץ לו
         window.onclick = function(event) {
             const modal = document.getElementById('editModal');
-            if (event.target == modal) {
+            if (event.target === modal) {
                 closeEditModal();
             }
         }
